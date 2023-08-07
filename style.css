@@ -1,0 +1,133 @@
+body {
+    color: #f1dac4;
+    background-color: #0d0c1d;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.timer {
+    font-size: 26px;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+}
+
+.mi-meconds {
+    font-size: 0.8em;
+    opacity: .6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 800px min-content;
+    gap: 20px;
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+.pole {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    width: 100%;
+    cursor: none;
+}
+
+.pole a,
+.pole button {
+    cursor: none;
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #a69cac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border: 1px solid #f1dac4;
+}
+
+button {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0d0c1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1dac4;
+    width: 100%;
+    height: 100px;
+    border: none;
+}
+
+.block {
+    background-color: #f1dac4;
+    width: 100%;
+    height: 100px;
+}
+
+.dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #474973;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 99;
+    pointer-events: none;
+    transition: transform .3s 0s, opacity .6s 0s, border-color .6s 0s;
+}
+
+.dot.cursor--hover {
+    background-color: #161b33;
+}
+
+.dot.cursor--down {
+    background-color: #161b33;
+    transform: scale(.8);
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: #a69cac;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 99;
+    pointer-events: none;
+    transition: 
+        transform .3s 0s, 
+        opacity .6s 0s, 
+        border-color .6s 0s, 
+        opacity .6s 0s;
+}
+
+.circle--hover {
+    transform: scale(.8);
+}
+
+.circle--down {
+    transform: scale(.1);
+}
+
+.circle--hidden {
+    opacity: 0;
+}
+
+.cursor--hidden {
+    opacity: 0;
+}
